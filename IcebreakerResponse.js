@@ -2,10 +2,9 @@ function IcebreakerResponse(email){
   this.email = email
 }
 
-IcebreakerResponse.BatchCreate = function(data){
-  return data.map(function(IcebreakerResponsesData){
-    return new IcebreakerResponse(IcebreakerResponsesData)
+IcebreakerResponse.BatchCreate = function(emails){
+  return emails.map(function(email){
+    return new IcebreakerResponse(email)
   })
 
 }
-let iceBreakerResponse = IcebreakerResponse.BatchCreate(data)
